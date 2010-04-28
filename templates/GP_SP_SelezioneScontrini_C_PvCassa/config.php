@@ -118,9 +118,10 @@
 		array_push($alignment, $Value);
 		
 	}	
-	
+	$exportstr = ('<a href="ajax.php?'. $_SERVER['QUERY_STRING'] .'&export=1">Export report</a>');
+	$output = ($exportstr);
 	//print_r ($Connection->repConf);
-	$output = '<style type="text/css">'. $Connection->repConf->Style .'</style>';
+	$output .= '<style type="text/css">'. $Connection->repConf->Style .'</style>';
 	
 	// Get the BGcolor value, and remove the value from the array. (cleaning up)
 	$bgcolor = array_shift($Connection->repData[2]);
@@ -203,44 +204,34 @@
 		$output .='</tr>';
 	}	
 	$output .='</tbody></table>';
+			
+	if (@$_GET['export'] == "1") {
 	
-	if (@$_GET['export'] == "Export") {
-		
-		if (@$_GET['export'] == "1") {
-		
-			$ods_generator = new Export_ODS('UTF-8');
-			reset($Connection->repData);
-			array_shift($Connection->repData);
-			array_shift($Connection->repData);
-			parse_numeric($Connection->repData);
-			/* echo '<pre>';
-			var_dump($Connection->repData);
-			echo '</pre>';	
-			die(); */
-			try {
-				$ods_generator->generate_xml($Connection->repData, 'My Test Worksheet');
-			} catch (Exception $e) {
+		$ods_generator = new Export_ODS('UTF-8');
+		reset($Connection->repData);
+		array_shift($Connection->repData);
+		array_shift($Connection->repData);
+		parse_numeric($Connection->repData);
+		/* echo '<pre>';
+		var_dump($Connection->repData);
+		echo '</pre>';	
+		die(); */
+		try {
+			$ods_generator->generate_xml($Connection->repData, 'My Test Worksheet');
+		} catch (Exception $e) {
+		echo "Exception \n";					// Uncomment for debugging only.
+		var_dump($e->getTrace());				// Uncomment for debugging only.
+		var_dump ($e->getMessage());			// Uncomment for debugging only.
+		die();
+		}
+
+		try {
+			$ods_generator->compress('content.xml', $ods_generator->content_xml);
+		} catch (Exception $e) {
 			echo "Exception \n";					// Uncomment for debugging only.
 			var_dump($e->getTrace());				// Uncomment for debugging only.
 			var_dump ($e->getMessage());			// Uncomment for debugging only.
 			die();
-			}
-
-			try {
-				$ods_generator->compress('content.xml', $ods_generator->content_xml);
-			} catch (Exception $e) {
-				echo "Exception \n";					// Uncomment for debugging only.
-				var_dump($e->getTrace());				// Uncomment for debugging only.
-				var_dump ($e->getMessage());			// Uncomment for debugging only.
-				die();
-			}
-			//$ods_generator->save();
-			//echo '<pre>';
-			//var_dump( $ods_generator->content_xml );
-			//echo '</pre>'; 
-		} else {
-		echo ($_SERVER['PHP_SELF'] .'&'. $_SERVER['QUERY_STRING'] .'&export=1');
-		die();
 		}
 	} else {
 		include('report_index.php');
