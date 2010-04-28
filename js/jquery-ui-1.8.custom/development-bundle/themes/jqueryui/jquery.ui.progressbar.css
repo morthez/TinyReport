@@ -1,0 +1,4 @@
+/* Progressbar
+----------------------------------*/
+jquery.ui .ui-progressbar { height:2em; text-align: left; }
+jquery.ui .ui-progressbar .ui-progressbar-value {margin: -1px; height:100%; }

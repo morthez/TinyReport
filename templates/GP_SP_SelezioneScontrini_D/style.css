@@ -1,0 +1,107 @@
+/*
+Style by Marius Davidsen
+*/
+#main {
+
+}
+
+#middle {
+	width: 650px;
+}
+
+#report-list li h2{
+	display: inline;
+	margin: 20px;
+	padding: 10px;
+	border-bottom: 1px solid #EEEEEE;
+}
+ul#report-list {
+	position:relative;
+	list-style-type: none;
+	left: -40px;
+	width: 650px;
+}
+#content {
+	position: relative;
+	height: 100%;
+	top: 0px;
+}
+
+fieldset#header {
+	width: 650px;
+}
+
+form#reportdetails { 
+	width: 650px;
+	height: 100%;
+}
+
+div.header {
+	/* height: 260px; */
+}
+div.reportline {
+	
+}
+
+div.reportdetail {
+	width: 300px;
+	float: left
+}
+
+div.clear {
+	clear:both;
+}
+/*
+ul.report-list li {
+	background-color: #EEE;	
+} */
+ul.objectcontainer {
+	width: 600px;
+	height: 60px;
+	list-style-type: none;
+}
+li.link a{
+	text-decoration: none;
+	color: #000;
+
+}
+
+ul.objectcontainer a:hover {
+	background-color: #FFF;
+}
+
+/*
+li.link a:hover
+{
+background-color: #369;
+color: #ADE;
+}
+*/
+li.odd {
+	/* background-color: #EEF0E0; */
+	background-color: #FFFFFF;
+}
+
+li.even {
+	/* background-color: #F0F2C2; */
+	background-color: #B4B4B4;
+}
+
+
+
+li.object {
+	float: left;
+	width: 200px;
+}
+
+span.green {
+	color: #1FB530;
+}
+
+span.red {
+	color: #ED2F2F;
+}
+
+span.smalltext {
+	font-size: 12px;
+}

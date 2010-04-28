@@ -1,0 +1,217 @@
+/*
+Style by Marius Davidsen
+*/
+
+@media print {
+	thead {display: table-header-group;}
+	tr {page-break-inside: avoid;}
+	#reportselector { display: none;}
+	#response { display: none;}
+	
+   }
+body {
+	font-family: arial, helvetica;
+	font-size: 12px;
+}
+
+body, td{
+	font-family: Helvetica,Arial,sans-serif;
+	font-size: 12px;
+	color: #333;
+	line-height: 1.4em;
+}
+
+a:link, a:visited {
+	text-decoration: none;
+	font-weight: normal;
+}
+
+a:hover {
+	text-decoration: underline;
+	font-weight: normal;
+}
+
+input.button { cursor: pointer; }
+
+p { margin-top: 0; margin-bottom: 5px; }
+
+img { border: 0 none; }
+
+#main {
+
+}
+
+#middle {
+	width: 650px;
+}
+
+#report-list li h2{
+	display: inline;
+	margin: 20px;
+	padding: 10px;
+	border-bottom: 1px solid #EEEEEE;
+}
+ul#report-list {
+	position:relative;
+	list-style-type: none;
+	left: -40px;
+	width: 650px;
+}
+#content {
+	position: relative;
+	height: 100%;
+	top: 0px;
+}
+
+fieldset#header {
+	width: 650px; 
+}
+
+form#reportdetails { 
+	min-width: 650px;
+	height: 100%;
+}
+
+table#reportdetcont {
+	/* min-width: 650px; */
+	
+}
+
+div.header {
+	/* height: 260px; */
+}
+div.reportline {
+	display: inline;
+	
+}
+
+div.reportdetail {
+	width: 300px;
+	float: left
+}
+
+div.clear {
+	clear:both;
+}
+/*
+ul.report-list li {
+	background-color: #EEE;	
+} */
+ul.objectcontainer {
+	width: 600px;
+	height: 60px;
+	list-style-type: none;
+}
+li.link a{
+	text-decoration: none;
+	color: #000;
+
+}
+
+ul.objectcontainer a:hover {
+	background-color: #FFF;
+}
+
+/*
+li.link a:hover
+{
+background-color: #369;
+color: #ADE;
+}
+*/
+li.odd {
+	/* background-color: #EEF0E0; */
+	background-color: #FFFFFF;
+}
+
+li.even {
+	/* background-color: #F0F2C2; */
+	background-color: #B4B4B4;
+}
+
+
+
+li.object {
+	float: left;
+	width: 200px;
+}
+
+span.green {
+	color: #1FB530;
+}
+
+span.red {
+	color: #ED2F2F;
+}
+
+span.smalltext {
+	font-size: 12px;
+}
+form#reportdetail {
+	width: 650px;
+}
+form#reportdetail div#reportform {
+	width: 650px;
+	float: left;
+}
+div#reportform input {
+	float: right;
+}
+
+span.error  {
+	background-color:#FAF89D;
+	border:1px solid #000000;
+	color:#FF0000;
+	float:left;
+	position:relative;
+	top:8px;
+	width:180px;
+	z-index:2;
+}
+
+th#idpdv {
+	width: 230px;
+}
+th#type {
+	width: 105px;
+}
+th#from {
+	width: 80px;
+}
+ th#to{
+	width: 80px;
+}
+
+/**
+ *	Style the Debug info. This is not that  
+ *	important,so this is put WAY at the botton :)
+ */
+ 
+ #debug_window_content { /*  DIV container for debug sizing*/ 
+ width:250px; 
+ height:100px; 
+ background-color:#000; 
+} 
+  
+#debug {         /*  DIV container for debug contents*/ 
+ padding:3px; 
+ color:#0f0; 
+ font-family:monaco, Tahoma, Verdana, Arial, Helvetica, sans-serif; 
+ font-size:10px; 
+} 
+ 
+ 
+ div#debug_footer {
+	clear: both;
+	padding:3px; 
+	color:#0f0; 
+	font-family:monaco, Tahoma, Verdana, Arial, Helvetica, sans-serif; 
+	font-size:10px; 
+ }
+ 
+ div#debug_get {
+	
+ }
+ div#debug_sp_parms {
+ 
+ }

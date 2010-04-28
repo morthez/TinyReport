@@ -1,0 +1,217 @@
+/*****************************/
+/*** Core html setup stuff ***/
+/*****************************/
+
+html {
+  height: 100%;
+  margin-bottom: 1px;
+}
+
+form {
+  display:inline;
+}
+
+body {
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
+}
+
+body, td{
+	font-family: Arial,sans-serif;
+	font-size: 14px;
+	color: #333;
+	line-height: 1.4em;
+}
+
+a:link, a:visited {
+	text-decoration: none;
+	font-weight: normal;
+}
+
+a:hover {
+	text-decoration: underline;
+	font-weight: normal;
+}
+
+input.button { cursor: pointer; }
+
+p { margin-top: 0; margin-bottom: 5px; }
+
+img { border: 0 none; }
+
+
+/*****************************************/
+/*** Template specific layout elements ***/
+/*****************************************/
+
+div.main_center{
+	margin:0px auto;
+}
+div.main_left{
+	float:left;
+}
+div.main_right{
+	float:right;
+}
+
+div#main{
+	width: auto;
+	text-align:left;
+	float: left;
+}
+
+div#middle{
+	margin:0px auto;
+	width: auto;
+}
+
+div#nologo{
+	display:block;
+	float:left;
+	width: 20px;
+}
+
+div#header{
+	position:relative;
+	height:100px;
+	margin-left: 5px;
+	margin-right: 5px;
+	width:auto;
+	font-size: 16px;
+}
+
+div#datetime {
+	margin: 6px;
+	width: auto;
+	float: left;
+}
+
+div#idpuv{
+	margin: 6px;
+	width: auto;
+	float: left;
+}
+
+div#cassa{
+	margin: 6px;
+	width: auto;
+	float: left;
+}
+
+div#scontrino{
+	margin: 6px;
+	width: auto;
+	float: right;
+}
+
+div#numclient{
+	margin: 6px;
+	width: auto;
+	float: right;
+}
+
+div#nameclient{
+	margin: 6px;
+	width: auto;
+	float: right;
+}
+
+thead#thead{
+	font-size: 12px;
+	margin: 0px;
+	vertical-align: center;
+}
+
+thead#thead th {
+	border: 1;
+    border-bottom: solid;
+	border-color: #000111;
+} 
+
+
+tr td {
+	vertical-align: top;
+}
+tr.even td{
+	background-color: #FFFFFF;
+}
+
+tr.odd td{
+	background-color: #B4B4B4;
+}
+
+tr.sum td {
+	text-align: right;
+}
+.logo{
+	display: block;
+	float:left;
+	padding-top:25px;
+}
+
+
+
+.main {
+ position:relative;
+ width:80%;
+}
+
+@media print {
+   thead {display: table-header-group;}
+}
+
+td.atop {
+	text-align: top;
+}
+td.aright {
+	text-align: right;
+}
+
+/*****************************************/
+/*** Form layout elements              ***/
+/*****************************************/
+
+
+div#object {
+	margin-left: 5;
+		
+}
+
+div#object.data,div#object.cassa {
+	clear: both;
+}
+
+form {  /* set width in form, not fieldset (still takes up more room w/ fieldset width */
+  font:100% arial,sans-serif,verdana;
+  margin: 0;
+  padding: 0;
+ /* min-width: 500px;
+  max-width: 600px;
+  width: 560px; */
+}
+
+form label { 
+	display: block;  /* block float the labels to left column, set a width */
+	float: left; 
+	width: 150px; 
+	padding: 0; 
+	margin: 5px 0 0; /* set top margin same as form input - textarea etc. elements */
+	text-align: right; 
+}
+
+form input, form textarea {
+	/* display: inline; inline display must not be set or will hide submit buttons in IE 5x mac */
+	width:auto;      /* set width of form elements to auto-size, otherwise watch for wrap on resize */
+	margin:5px 0 0 10px; /* set margin on left of form elements rather than right of
+                              label aligns textarea better in IE */
+}
+
+form input#reset {
+	margin-left:0px; /* set margin-left back to zero on reset button (set above) */
+}
+
+form br {
+	clear:left; /* setting clear on inputs didn't work consistently, so brs added for degrade */
+}
+
+

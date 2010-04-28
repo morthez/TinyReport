@@ -1,0 +1,130 @@
+/*****************************************/
+/*** Template specific layout elements ***/
+/*****************************************/
+
+div#main{
+	width: 650px;
+	text-align:left;
+	float: left;
+	margin:0px auto;
+}
+
+div#middle{
+	margin:0px auto;
+	width: 650px;
+}
+
+div#nologo{
+	display:block;
+	float:left;
+	width: 20px;
+}
+
+div#header{
+	position:relative;
+	height:100px;
+	margin-left: 5px;
+	margin-right: 5px;
+	width:auto;
+	font-size: 16px;
+}
+
+div#datetime {
+	margin: 6px;
+	width: 216px;
+	float: left;
+}
+
+div#idpuv{
+	margin: 6px;
+	width: 216px;
+	float: left;
+}
+
+div#cassa{
+	margin: 6px;
+	width: 216px;
+	float: left;
+}
+
+div#scontrino{
+	margin: 6px;
+	width: 216px;
+	float: right;
+}
+
+div#numclient{
+	margin: 6px;
+	width: 216px;
+	float: right;
+}
+
+div#nameclient{
+	margin: 6px;
+	width: 216px;
+	float: right;
+}
+
+thead#thead{
+	font-size: 12px;
+	margin: 0px;
+	vertical-align: center;
+}
+
+thead#thead th {
+	border: 1;
+    border-bottom: solid;
+	border-color: #000111;
+} 
+
+
+tr td {
+	vertical-align: top;
+}
+tr.even td{
+	background-color: #B4B4B4;
+}
+
+tr.odd td{
+	background-color: #FFFFFF;
+}
+
+tr.sum td {
+	text-align: right;
+}
+.logo{
+	display: block;
+	float:left;
+	padding-top:25px;
+}
+
+
+
+.main {
+ position:relative;
+ width:80%;
+}
+.report_header {
+ position:relative;
+ width:190px;
+}
+
+.Scontrinonr {
+ position:absolute;
+ float:left;
+ width:190px;
+}
+
+.Cassa {
+ position:absolute;
+ float:left;
+ width:190px;
+}
+
+
+td.atop {
+	text-align: top;
+}
+td.aright {
+	text-align: right;
+}

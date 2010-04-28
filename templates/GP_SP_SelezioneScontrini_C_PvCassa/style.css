@@ -1,0 +1,12 @@
+/*
+Style by Marius Davidsen
+*/
+
+table.main {
+	border: 1;
+	border-width: 1px;
+}
+div#contentholder{
+	width: 98%;
+}
+
